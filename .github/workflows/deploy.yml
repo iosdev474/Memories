@@ -25,7 +25,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Pikachu I choose you
-        run: docker build . -t memories-app -f DockerFile
+        run: |
+        echo $pwd
+        ls -l
+        docker build . -t memories-app -f DockerFile
 
       # Runs a set of commands using the runners shell
       - name: Pikachu, attack with thuderbolt
